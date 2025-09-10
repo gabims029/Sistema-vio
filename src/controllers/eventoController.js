@@ -121,7 +121,6 @@ module.exports = class eventoController {
     }
   }
 
-
   static async getImagemEvento(req,res){
     const id = req.params.id;
     const query = "SELECT imagem FROM evento WHERE id_evento=?"
@@ -132,8 +131,6 @@ module.exports = class eventoController {
       res.set("Content-Type", results[0].tipo_imagem);
       return res.send(results[0].imagem);
     })
-
-
   }
 
 };
